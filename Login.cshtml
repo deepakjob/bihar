@@ -1,0 +1,45 @@
+﻿@model PowerBI.Web.Models.LoginModel
+@{
+    Layout = null;
+}
+<head>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+    <link href="~/css/Login.css" rel="stylesheet" />
+    <title>Department Of Agriculture-Bihar</title>
+</head>
+<body>
+    <section>
+        <div class="Container aligncenter">
+            <div class="bg-light elements">
+                <form id="account" method="post">
+                    <div class="aligncenter">
+                        <img src="~/images/Mitti_App_Icon_circle.png" class="logo" />
+                    </div>
+                    <div>
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                    </div>
+                    <div class="titletext">Department Of Agriculture, </br> Bihar</div>
+                    <div class="form-group aligncenter">
+                        <input asp-for="Username" class="bg-light input" placeholder="Username" required/>
+                        <span asp-validation-for="Username" class="text-danger" ></span>
+                    </div>
+                    <div class="form-group aligncenter">
+                        <input asp-for="Password" class="bg-light input" placeholder="Password" required/>
+                        <span asp-validation-for="Password" class="text-danger" ></span>
+                    </div>
+                    <div class="forget">
+                        <a class="text">Forgot your password?</a>
+                    </div>
+                    <div class="form-group aligncenter">
+                        <button type="submit" class="button">Login</button>
+                    </div>
+                    <div class="aligncenter textmargin">
+                        <p>
+                            <a class="text">Are you a new user? <span style="color: #121F65; font-weight: bolder;">Create Account</span></a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
